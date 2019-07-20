@@ -12,15 +12,12 @@ ConvertTo-Pdf -Path "test.txt" -OutputPath "D:\\"
 Plain text file
 .OUTPUTS
 PDF File
-.NOTES
-General notes
 #>
 function ConvertTo-Pdf {
     [CmdletBinding(SupportsShouldProcess=$true,
     PositionalBinding=$false,
     ConfirmImpact='Medium')]
     [Alias()]
-    [OutputType([string])]
     Param (
     # Plain Text file path 
     [Parameter(Mandatory=$true,
